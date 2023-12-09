@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block styling %}
+{{ bootstrap.load_css() }}
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1>Login</h1>
+<!--    <form method="post" action="{{url_for('login')}}"  >-->
+<!--    {{ form.csrf_token }}-->
+<!--    <p>-->
+<!--        {{ form.email.label }} <br> {{ form.email(size=20) }}-->
+<!--        {% for error in form.password.error %}-->
+<!--        {{error}}-->
+<!--        {% endfor %}-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        {{ form.password.label }}<br> {{ form.password(size=20) }}-->
+<!--        {% for error in form.password.error %}-->
+<!--        {{error}}-->
+<!--        {% endfor %}-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        {{ form.submit(size=20) }}-->
+<!--    </p>-->
+<!--    </form>-->
+    {{ render_form(form) }}
+
+</div>
+{% endblock %}
